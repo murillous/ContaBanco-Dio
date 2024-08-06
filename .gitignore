@@ -59,4 +59,4 @@ tmp/
 *.ipr
  
  # Ignorando Pasta do VsCode
-*/.vscode/
+.vscode/
