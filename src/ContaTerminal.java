@@ -5,10 +5,13 @@ public class ContaTerminal {
         
         // usando try-with-resources para evitar vazamento de recursos
         try (Scanner scanner = new Scanner(System.in).useLocale(Locale.US)) {
-            System.out.println("=========BANCO======");
+            System.out.println("=========BANCO=========");
 
             System.out.println("Digite seu nome: ");
             String userName = scanner.next();
+
+            System.out.println("Digite seu sobrenome: ");
+            String userLastName = scanner.next();
 
             System.out.println("Digite o número da sua agência: ");
             String agencyNumber = scanner.next();
@@ -19,7 +22,7 @@ public class ContaTerminal {
             System.out.println("Digite o seu saldo: ");
             double bankBalance = scanner.nextDouble();
 
-            System.out.println(String.format("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo de %.2f já está disponível para saque", userName, agencyNumber, accountNumber, bankBalance));
+            System.out.println(String.format("Olá %s %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo de %.2f já está disponível para saque", userName, userLastName, agencyNumber, accountNumber, bankBalance));
         }
 
     }
